@@ -17,8 +17,10 @@ public class SeguroDAO {
 	private String pass = "root";
 	private String dbName = "segurosgroup";
 
-	SeguroDAO() {}
+
 	
+	public SeguroDAO() {}
+
 	public int agregarSeguro(Seguro seguro) {
 		
 	    String query = "INSERT INTO seguros (descripcion, idTipo, costoContratacion, costoAsegurado) VALUES (?, ?, ?, ?)";
