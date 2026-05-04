@@ -1,0 +1,5 @@
+<nav>
+    <a href="InicioServlet">Inicio</a> | 
+    <a href="AgregarSeguroServlet">Agregar Seguros</a> | 
+    <a href="ListarSegurosServlet">Listar Seguros</a>
+</nav>
