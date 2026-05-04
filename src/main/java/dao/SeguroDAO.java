@@ -16,6 +16,8 @@ public class SeguroDAO {
 	private String user = "root";
 	private String pass = "root";
 	private String dbName = "segurosgroup";
+
+	SeguroDAO() {}
 	
 	public int agregarSeguro(Seguro seguro) {
 		
@@ -47,8 +49,7 @@ public class SeguroDAO {
 	    }
 	    return filas;
 	}
-	
-	
+
 	public ArrayList<Seguro> listarSeguros(int idTipo){
 		ArrayList<Seguro> lista = new ArrayList<>();
 		Connection cn = null;
