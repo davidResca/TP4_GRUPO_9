@@ -5,17 +5,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Agregar Seguros</title>
+<style type="text/css">
+form {
+	border: 2px solid blue;
+	display: inline-block;
+	padding: 15px;
+}
+</style>
 </head>
 <body>
 	<%@ include file="includes/nav.jspf" %>
-	<hr>
-	<h1>Agregar Seguros</h1><br>
+	<hr>	
 	
+	<h1>Agregar Seguros</h1><br>
 	<form action="AgregarSeguroServlet" method="POST">
-		<table border="0">
+		<table>
 			<tr>
 				<td>Descripcion:</td>
-				<td><input type="text" name="txtDescripcion" required></td>
+				<td><label><input type="text" name="txtId" value="${proximoId}" readonly></label></td>
 			</tr>
 			
 			<tr>
@@ -39,7 +46,7 @@
 			<tr>
 				<td colspan="2">
 					<br>
-					<input type="submit" value="Aceptar">
+					<input type="submit" value="Aceptar" name="btnAceptarSeguro">
 				</td>
 			</tr>	
 		</table>
