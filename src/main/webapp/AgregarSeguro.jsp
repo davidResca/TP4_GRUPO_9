@@ -9,6 +9,6 @@
 <body>
 	<%@ include file="includes/nav.jspf" %>
 	<hr>
-	<h1>AGREGAR SEGURO</h1>
+	<h1>Agregar Seguros</h1><br>
 </body>
 </html>

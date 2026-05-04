@@ -9,6 +9,6 @@
 <body>
 	<%@ include file="includes/nav.jspf" %>
 	<hr>
-	<h2>Pagina de Inicio</h2>
+	<h1>Soy la página inicio</h1>
 </body>
 </html>

@@ -2,13 +2,13 @@ package dominio;
 
 public class TipoSeguro {
 	private int id;
-	private String nombre;
+	private String descripcion;
 
 	public TipoSeguro() {}
 
-	public TipoSeguro(int id, String nombre) {
+	public TipoSeguro(int id, String descripcion) {
 		this.id = id;
-		this.nombre = nombre;
+		this.descripcion = descripcion;
 	}
 
 	public int getId() {
@@ -19,11 +19,11 @@ public class TipoSeguro {
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getDescripcion() {
+		return descripcion;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 }
