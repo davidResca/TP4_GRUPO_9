@@ -39,11 +39,6 @@ public class AgregarSeguroServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
-		
-		
-		
 		int filas=0;
 		if(request.getParameter("btnAceptarSeguro")!= null) {
 			Seguro seguro = new Seguro();
@@ -63,6 +58,9 @@ public class AgregarSeguroServlet extends HttpServlet {
 		}
 		 
 		request.setAttribute("cantFilas",filas);
+
+		TipoSeguroDAO tipoDAO = new TipoSeguroDAO();
+		request.setAttribute("tipos", tipoDAO.obtenerTodos());
 		
 		RequestDispatcher rd1 = request.getRequestDispatcher("/AgregarSeguro.jsp");
 		rd1.forward(request, response);

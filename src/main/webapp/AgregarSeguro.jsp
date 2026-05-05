@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="dominio.TipoSeguro" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,9 +33,16 @@ form {
 				<td>Tipo de Seguro:</td>
 				<td>
 					<select name="ddlTipoSeguro">
-						<option value="1">Seguro de casas</option>
-						<option value="2">Seguro de vida</option>
-						<option value="3">Seguro de motos</option>
+						<%
+							ArrayList<TipoSeguro> tipos = (ArrayList<TipoSeguro>) request.getAttribute("tipos");
+							if (tipos != null) {
+								for (TipoSeguro t : tipos) {
+						%>
+							<option value="<%= t.getId() %>"><%= t.getDescripcion() %></option>
+						<%
+								}
+							}
+						%>
 					</select>
 				</td>
 			</tr>

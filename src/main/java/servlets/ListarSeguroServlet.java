@@ -43,7 +43,6 @@ public class ListarSeguroServlet extends HttpServlet {
         ArrayList<Seguro> lista = seguroDAO.listarSeguros(idFiltro);
         request.setAttribute("lista", lista);
 
-        
         RequestDispatcher rd = request.getRequestDispatcher("/ListarSeguro.jsp"); 
         rd.forward(request, response);
     }

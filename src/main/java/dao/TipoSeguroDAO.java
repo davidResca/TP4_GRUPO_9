@@ -13,7 +13,7 @@ public class TipoSeguroDAO {
     private String host = "jdbc:mysql://localhost:3306/";
     private String user = "root";
     private String pass = "root";
-    private String dbName = "segurosgroup";
+    private String dbName = "SegurosGroup";
 
     public TipoSeguroDAO() {}
 
@@ -23,7 +23,7 @@ public class TipoSeguroDAO {
         PreparedStatement ps = null;
         ResultSet rs = null;
         
-        String query = "select idTipo, descripcion from tiposeguros"; 
+        String query = "select idTipo, descripcion from tipoSeguros"; 
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

@@ -13,7 +13,7 @@
 	<hr>
 	<h1>Tipo de seguros en la base de datos</h1>
 	
-	<form action="ListarSegurosServlet" method="POST">
+	<form action="ListarSeguroServlet" method="POST">
 		<label>Busqueda por tipo de seguros:</label>
 		<select name="ddlFiltroTipo">
 			<option value="1">Seguro de casas</option>

@@ -16,7 +16,7 @@ public class SeguroDAO {
     private String host ="jdbc:mysql://localhost:3306/";
     private String user = "root";
     private String pass = "root";
-    private String dbName = "segurosgroup";
+    private String dbName = "SegurosGroup";
 
     public SeguroDAO() {}
 
