@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import dao.SeguroDAO;
 import dominio.Seguro;
 import dominio.TipoSeguro;
+import dao.TipoSeguroDAO;
+import java.util.ArrayList;
 
 /**
  * Servlet implementation class AgregarSeguroServlet
@@ -27,7 +29,12 @@ public class AgregarSeguroServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		TipoSeguroDAO tipoDAO = new TipoSeguroDAO();
+	    ArrayList<TipoSeguro> tipos = tipoDAO.obtenerTodos();
+	    request.setAttribute("tipos", tipos);
+	    
+	    RequestDispatcher rd = request.getRequestDispatcher("/AgregarSeguro.jsp");
+	    rd.forward(request, response);
 	}
 
 	
