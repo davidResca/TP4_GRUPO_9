@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList" %>
+<%@page import="dominio.Seguro" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -32,6 +34,30 @@
 				<th>Costo Maximo Asegurado</th>
 			</tr>
 		</thead>
+		<tbody>
+			<% 
+				ArrayList<Seguro> lista = (ArrayList<Seguro>) request.getAttribute("lista");
+				if (lista != null && !lista.isEmpty()) {
+					for (Seguro s : lista) {
+			%>
+			<tr>
+				<td style="text-align: center;"><%= s.getIdSeguro() %></td>
+				<td><%= s.getDescripcion() %></td>
+				<td style="text-align: center;"><%= s.getTipoSeguro().getDescripcion() %></td>
+				<td style="text-align: center;"><%= s.getCostoContratacion() %></td>
+				<td style="text-align: center;"><%= s.getCostoAsegurado() %></td>
+			</tr>
+			<% 
+				}
+					}else {
+			%>
+			<tr>
+				<td colspan="5" style="text-align: center;">No hay seguros para mostrar.</td>
+			</tr>
+			<% 
+					}
+			%>
+		</tbody>
 	</table>
 </body>
 </html>
