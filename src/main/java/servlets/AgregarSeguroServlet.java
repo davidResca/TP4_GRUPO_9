@@ -50,13 +50,13 @@ public class AgregarSeguroServlet extends HttpServlet {
 			seguro.setDescripcion(request.getParameter("txtDescripcion"));
 			
 			TipoSeguro tipo = new TipoSeguro();
-	        int idTipo = Integer.parseInt(request.getParameter("selectTipoSeguro"));
+	        int idTipo = Integer.parseInt(request.getParameter("ddlTipoSeguro"));
 	        tipo.setId(idTipo); 
 	        
 	        
 	        seguro.setTipoSeguro(tipo);
-			seguro.setCostoContratacion(Double.parseDouble(request.getParameter("txtCostoContrartacion")));
-			seguro.setCostoAsegurado(Double.parseDouble(request.getParameter("txtMaximoAsegurado")));
+			seguro.setCostoContratacion(Double.parseDouble(request.getParameter("txtCostoContratacion")));
+			seguro.setCostoAsegurado(Double.parseDouble(request.getParameter("txtCostoMaximo")));
 			
 			SeguroDAO seguroDAO = new SeguroDAO();
 			filas=seguroDAO.agregarSeguro(seguro);

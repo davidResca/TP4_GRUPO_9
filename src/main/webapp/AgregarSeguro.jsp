@@ -22,7 +22,7 @@ form {
 		<table>
 			<tr>
 				<td>Descripcion:</td>
-				<td><label><input type="text" name="txtId" value="${proximoId}" readonly></label></td>
+				<td><label><input type="text" name="txtDescripcion"></label></td>
 			</tr>
 			
 			<tr>
