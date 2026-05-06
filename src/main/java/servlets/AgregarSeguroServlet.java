@@ -33,6 +33,10 @@ public class AgregarSeguroServlet extends HttpServlet {
 	    ArrayList<TipoSeguro> tipos = tipoDAO.obtenerTodos();
 	    request.setAttribute("tipos", tipos);
 	    
+	    SeguroDAO seguroDAO = new SeguroDAO();
+	    int proximoId = seguroDAO.obtenerProximoId();
+	    request.setAttribute("proximoId", proximoId);
+	    
 	    RequestDispatcher rd = request.getRequestDispatcher("/AgregarSeguro.jsp");
 	    rd.forward(request, response);
 	}

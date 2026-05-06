@@ -25,7 +25,11 @@ form {
 	<form action="AgregarSeguroServlet" method="POST">
 		<table>
 			<tr>
-				<td>Descripcion:</td>
+			    <td>Id Seguro:</td>
+			    <td><input type="text" value="${proximoId}" readonly></td>
+			</tr>
+			<tr>
+				<td>Descripcion :</td>
 				<td><label><input type="text" name="txtDescripcion"></label></td>
 			</tr>
 			
